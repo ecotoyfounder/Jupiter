@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, tap } from 'rxjs';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Answer, Gallery, Item } from '../interfaces/interfaces';
 
@@ -36,8 +36,7 @@ export class MovieService {
             header: e.header,
           };
         });
-      }),
-      tap((info) => console.log(info))
+      })
     );
   }
 }
