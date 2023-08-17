@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --err-blue: #296CCC;
+  --err-dark-blue: #2156a3;
+  --err-gray: #95a3ad;
+}
+
+body {
+  background-color: var(--err-dark-blue);
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+}
+
+path {
+  transform-origin: center;
+}
+
+

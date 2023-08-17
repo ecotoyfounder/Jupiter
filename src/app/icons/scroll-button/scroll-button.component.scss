@@ -1,6 +1,26 @@
-svg {
+.scroll-button {
   position: absolute;
   top: 50%;
-  left: 20px;
-  translate: -50% -50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  display: block;
+  box-shadow: rgba(0, 0, 0, 0.16) 2px 2px 6px;
 }
+
+.scroll-button:hover {
+  background: var(--err-gray);
+}
+
+.left-arrow {
+  left: 20px;
+}
+
+.right-arrow {
+  right: 0;
+}
+

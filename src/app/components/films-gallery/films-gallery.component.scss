@@ -1,0 +1,37 @@
+.gallery {
+  position: relative;
+}
+
+.gallery-flex {
+  display: flex;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+}
+
+.gallery-flex::-webkit-scrollbar {
+  display: none;
+}
+
+//.card-hiding {
+//  position: absolute;
+//  background: #95a3ad;
+//  left: 0;
+//}
+
+.movie-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 6px;
+}
+
+img {
+  border-radius: 20px;
+  width: 200px;
+  height: 300px;
+}
+
+h3 {
+  font-size: 14px;
+  text-align: center;
+}

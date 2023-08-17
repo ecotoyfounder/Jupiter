@@ -1,1 +1,25 @@
-<p>films-gallery works!</p>
+<div *ngFor="let g of gallery">
+  <h2>{{ g.header }}</h2>
+  <div class="gallery">
+    <div #filmsList
+         class="gallery-flex">
+      <div *ngFor="let card of g.data"
+           class="movie-card">
+        <img [src]=card
+             alt="hello!">
+      </div>
+    </div>
+    <app-scroll-button
+      (hasScrolled)="onScroll($event)"
+      *ngIf="(leftVisible | async) && g.data.length > 0"
+      [direction]="'left'"
+      [ref]="filmsList"
+    ></app-scroll-button>
+    <app-scroll-button
+      (hasScrolled)="onScroll($event)"
+      *ngIf="(rightVisible | async) && g.data.length > 0"
+      [direction]="'right'"
+      [ref]="filmsList"
+    ></app-scroll-button>
+  </div>
+</div>
